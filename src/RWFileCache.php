@@ -121,13 +121,13 @@ class RWFileCache
             return false;
         }
 
-        if (!function_exists('sys_getloadavg')) {
-            throw new Exception('Your PHP installation does not support `sys_getloadavg` (Windows?). Please set `unixLoadUpperThreshold` to `-1` in your RWFileCache config.');
-        }
-
         if ($this->config['unixLoadUpperThreshold'] == -1) {
             $unixLoad = [0 => PHP_INT_MAX, 1 => PHP_INT_MAX, 2 => PHP_INT_MAX];
         } else {
+            if (!function_exists('sys_getloadavg')) {
+                throw new Exception('Your PHP installation does not support `sys_getloadavg` (Windows?). Please set `unixLoadUpperThreshold` to `-1` in your RWFileCache config.');
+            }
+
             $unixLoad = sys_getloadavg();
         }
 
