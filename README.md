@@ -1,5 +1,8 @@
 # RW File Cache
 
+> [!WARNING]
+> This package is retired and no longer maintained. Use [`jord-jd/do-file-cache`](https://packagist.org/packages/jord-jd/do-file-cache) instead. The replacement preserves the same core API and contains the current PHP compatibility and correctness fixes.
+
 [![Build Status](https://travis-ci.org/rapidwebltd/RW-File-Cache.svg?branch=master)](https://travis-ci.org/rapidwebltd/RW-File-Cache)
 [![Coverage Status](https://coveralls.io/repos/github/rapidwebltd/RW-File-Cache/badge.svg?branch=master)](https://coveralls.io/github/rapidwebltd/RW-File-Cache?branch=master)
 ![Packagist](https://img.shields.io/packagist/dt/rapidwebltd/rw-file-cache.svg)
